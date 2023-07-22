@@ -1,10 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Nunito:wght@600&display=swap");
+@font-face {
+  font-family: "Caesar Dressing", sans-serif;
+  src: url(CaesarDressing-Regular.ttf) format("truetype");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Nunito", sans-serif;
-  list-style-type: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+body .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: 5rem;
+  font-family: "Caesar Dressing", sans-serif;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 3rem;
+}
+body .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+body .content__news {
+  background-image: url("../images/img.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 23rem;
+  height: 19rem;
+  color: white;
+}
+body .load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  gap: 1.5rem;
+  height: 5rem;
+}
+body .load__more {
+  text-transform: uppercase;
+}
+body .base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

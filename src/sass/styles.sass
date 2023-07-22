@@ -1,11 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Nunito:wght@600&display=swap')
+@use 'mixins'
+@use 'fonts'
 
 *
     padding: 0
     margin: 0
     box-sizing: border-box
     font-family: 'Nunito', sans-serif
-    list-style-type: none
+
+ul 
+    list-style: none
+
+a
+    text-decoration: none    
+    color: black
 
 body 
-    
+    width: 100%
+    min-height: 100vh
+
+    .menu
+        @include mixins.flex-center
+        min-width: 100%
+        height: 5rem
+        font-family:'Caesar Dressing', sans-serif
+        justify-content: space-between
+        padding: 1rem
+        border-bottom: 1px solid black
+        margin-bottom: 3rem
+
+    .content
+        @include mixins.flex-center
+        flex-direction: column
+        gap: 2rem
+       
+        &__news
+           @include mixins.bg-img('img.png')
+           @include mixins.news-shape           
+           color: white
+
+    .load
+        @include mixins.flex-center
+        border-bottom: 1px solid black
+        gap: 1.5rem
+        height: 5rem
+
+        &__more
+            text-transform: uppercase
+
+    .base
+        @include mixins.flex-center
+        flex-direction: column
+        text-align: center
+       
+       
