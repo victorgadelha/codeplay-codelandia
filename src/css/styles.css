@@ -38,7 +38,6 @@ body .content {
   gap: 2rem;
 }
 body .content__news {
-  background-image: url("../images/img.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
