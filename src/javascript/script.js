@@ -10,11 +10,13 @@ const fetchNews = async () => {
 const setNews = async () => {
     allNews = await fetchNews()
     tecNews = allNews.articles
+    
     try {
         for (let i = 0; i < tecNews.length; i++) {
             const newsImage = tecNews[i].urlToImage
             const newsDate = tecNews[i].publishedAt.substr(0, 10)
             const newsTitle = tecNews[i].title
+            const newsLink = tecNews[i].url
     
             if (!newsImage || !newsDate || !newsTitle) {
                 continue;
@@ -36,11 +38,17 @@ const setNews = async () => {
             const newsImageSrc = document.createElement('img')
             newsImageSrc.classList.add('content__image')
             newsImageSrc.src = `${newsImage}`
+
+            const newsLinkContainer = document.createElement('a')
+            newsLinkContainer.classList.add('content__link')
+            newsLinkContainer.href = newsLink
+            newsLinkContainer.setAttribute('target', '_blank')
+            newsLinkContainer.appendChild(newsImageSrc)
     
             const newsArticle = document.createElement('article')
             newsArticle.classList.add('content__news')
             
-            newsArticle.appendChild(newsImageSrc)
+            newsArticle.appendChild(newsLinkContainer)
             newsArticle.appendChild(newsTextContainer)
            
             mainNews.appendChild(newsArticle)

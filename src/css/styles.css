@@ -40,13 +40,15 @@ body .content {
   color: #E2E2E2;
 }
 body .content__news {
-  width: 16rem;
+  width: 16.5rem;
   height: 26rem;
 }
 body .content__image {
   width: 16rem;
   height: 19rem;
+  width: 100%;
   object-fit: cover;
+  margin-bottom: 1rem;
 }
 body .content__text {
   color: black;
