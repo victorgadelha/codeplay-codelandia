@@ -10,29 +10,47 @@ const fetchNews = async () => {
 const setNews = async () => {
     allNews = await fetchNews()
     tecNews = allNews.articles
-    for (let i = 0; i < tecNews.length; i++) {
-        const newsImage = tecNews[i].urlToImage
-        const newsDate = tecNews[i].publishedAt
-        const newsTitle = tecNews[i].title
-
-        newsDateContainer = document.createElement('p')
-        newsDateContainer.classList.add('content__date')
-        newsDateContainer.textContent = newsDate
-
-        newsTitleContainer = document.createElement('h2')
-        newsTitleContainer.classList.add('content__text')
-        newsTitleContainer.textContent = newsTitle
-
-        newsArticle = document.createElement('article')
-        newsArticle.classList.add('content__news')
-        newsArticle.style.backgroundImage = `url(${newsImage})`
-        newsArticle.appendChild(newsDateContainer)
-        newsArticle.appendChild(newsTitleContainer)
-
-        
-        console.log(tecNews)
+    try {
+        for (let i = 0; i < tecNews.length; i++) {
+            const newsImage = tecNews[i].urlToImage
+            const newsDate = tecNews[i].publishedAt.substr(0, 10)
+            const newsTitle = tecNews[i].title
+    
+            if (!newsImage || !newsDate || !newsTitle) {
+                continue;
+            }
+    
+            const newsDateContainer = document.createElement('p')
+            newsDateContainer.classList.add('content__text-date')
+            newsDateContainer.textContent = newsDate
+    
+            const newsTitleContainer = document.createElement('h2')
+            newsTitleContainer.classList.add('content__text-title')
+            newsTitleContainer.textContent =  newsTitle 
+    
+            const newsTextContainer = document.createElement('div')
+            newsTextContainer.classList.add('content__text')
+            newsTextContainer.appendChild(newsDateContainer)
+            newsTextContainer.appendChild(newsTitleContainer)
+    
+            const newsImageSrc = document.createElement('img')
+            newsImageSrc.classList.add('content__image')
+            newsImageSrc.src = `${newsImage}`
+    
+            const newsArticle = document.createElement('article')
+            newsArticle.classList.add('content__news')
+            
+            newsArticle.appendChild(newsImageSrc)
+            newsArticle.appendChild(newsTextContainer)
+           
+            mainNews.appendChild(newsArticle)
+            console.log(tecNews)
+        }     
     }
-   
+    
+    catch(error) {
+        console.log(error)
+    }
 }
 
 setNews()

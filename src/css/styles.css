@@ -17,6 +17,7 @@ a {
 body {
   width: 100%;
   min-height: 100vh;
+  background-color: #F9F9F9;
 }
 body .menu {
   display: flex;
@@ -28,7 +29,7 @@ body .menu {
   justify-content: space-between;
   padding: 0 1.8rem 0 1.8rem;
   border-bottom: 2px solid #E2E2E2;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 body .content {
   display: flex;
@@ -36,23 +37,23 @@ body .content {
   align-items: center;
   flex-direction: column;
   gap: 2rem;
+  color: #E2E2E2;
 }
 body .content__news {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 16rem;
+  height: 26rem;
+}
+body .content__image {
   width: 16rem;
   height: 19rem;
-  color: white;
-  padding: 1rem;
-}
-body .content__date {
-  margin-top: 11rem;
+  object-fit: cover;
 }
 body .content__text {
-  max-width: 22rem;
-  margin-top: 1rem;
-  font-size: 1.4rem;
+  color: black;
+  text-align: justify;
+}
+body .content__text-title {
+  font-size: 1rem;
 }
 body .load {
   display: flex;
