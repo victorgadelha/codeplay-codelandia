@@ -31,7 +31,7 @@ body .menu {
   font-family: "Caesar Dressing", sans-serif;
   justify-content: space-between;
   padding: 1rem;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #E2E2E2;
   margin-bottom: 3rem;
 }
 body .content {
@@ -49,14 +49,24 @@ body .content__news {
   width: 23rem;
   height: 19rem;
   color: white;
+  padding: 1rem;
+}
+body .content__date {
+  margin-top: 11rem;
+}
+body .content__text {
+  max-width: 22rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
 }
 body .load {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #E2E2E2;
   gap: 1.5rem;
   height: 5rem;
+  margin-bottom: 1.5rem;
 }
 body .load__more {
   text-transform: uppercase;
@@ -67,6 +77,15 @@ body .base {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+body .base__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .base__content {
+  text-transform: capitalize;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -25,7 +25,7 @@ body
         font-family:'Caesar Dressing', sans-serif
         justify-content: space-between
         padding: 1rem
-        border-bottom: 1px solid black
+        border-bottom: 2px solid #E2E2E2
         margin-bottom: 3rem
 
     .content
@@ -35,14 +35,24 @@ body
        
         &__news
            @include mixins.bg-img('img.png')
-           @include mixins.news-shape           
+           @include mixins.news-shape 
            color: white
+           padding: 1rem
+
+        &__date
+            margin-top: 11rem
+
+        &__text
+            max-width: 22rem
+            margin-top: 1rem
+            font-size: 1.4rem
 
     .load
         @include mixins.flex-center
-        border-bottom: 1px solid black
+        border-bottom: 2px solid #E2E2E2
         gap: 1.5rem
         height: 5rem
+        margin-bottom: 1.5rem
 
         &__more
             text-transform: uppercase
@@ -51,5 +61,16 @@ body
         @include mixins.flex-center
         flex-direction: column
         text-align: center
+        
+
+        &__list
+            @include mixins.flex-center
+            flex-direction: column
+            
+        &__content
+            text-transform: capitalize
+           
+
+            
        
-       
+
