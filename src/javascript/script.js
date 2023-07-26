@@ -1,4 +1,4 @@
-const mainNews = document.querySelector('.content')
+/* const mainNews = document.querySelector('.content')
 
 const API_URL = 'https://newsapi.org/v2/top-headlines?category=technology&apiKey=8a7f37754729406887c42dac68fb9edf'
 const fetchNews = async () => {
@@ -61,7 +61,7 @@ const setNews = async () => {
     }
 }
 
-setNews()
+setNews() */
 
 /*const mainNews = document.querySelector('.content')
 

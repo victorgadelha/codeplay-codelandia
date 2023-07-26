@@ -15,75 +15,25 @@ a {
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #F9F9F9;
 }
-body .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  height: 5rem;
-  font-family: "Caesar Dressing", sans-serif;
-  justify-content: space-between;
-  padding: 0 1.8rem 0 1.8rem;
-  border-bottom: 2px solid #E2E2E2;
-  margin-bottom: 2rem;
-}
-body .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  color: #E2E2E2;
-}
-body .content__news {
-  width: 16.5rem;
-  height: 26rem;
-}
-body .content__image {
-  width: 16rem;
-  height: 19rem;
+body .container {
   width: 100%;
-  object-fit: cover;
-  margin-bottom: 1rem;
+  min-height: 100vh;
 }
-body .content__text {
-  color: black;
-  text-align: justify;
-}
-body .content__text-title {
-  font-size: 1rem;
-}
-body .load {
+body .container .menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 2px solid #E2E2E2;
-  gap: 1.5rem;
-  height: 5rem;
-  margin-bottom: 1.5rem;
-}
-body .load__more {
-  text-transform: uppercase;
-}
-body .base {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-body .base__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-body .base__content {
-  text-transform: capitalize;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  min-height: 5rem;
+  border-bottom: 1px solid #E2E2E2;
 }
 
 /*# sourceMappingURL=styles.css.map */
